@@ -287,6 +287,8 @@ void selectionSort(int arr[], int n)
 
 
 void QueueList_Sort(QueueList *l){
+    if(l->head==nullptr)
+        return;
     Cell *scorrimento = l->head;
     while(scorrimento->next != nullptr){
         Cell *min = scorrimento;
