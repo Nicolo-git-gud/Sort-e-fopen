@@ -298,10 +298,9 @@ void QueueList_Sort(QueueList *l){
                 min = s2;
             s2 = s2->next;
         }
-        Cell *aux;
-        aux->value = scorrimento->value;
+        Cell aux = *scorrimento;
         scorrimento->value = min->value;
-        min->value = aux-> value;
+        min->value = aux.value;
         scorrimento = scorrimento->next;
         
     }
